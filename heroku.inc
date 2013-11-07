@@ -31,7 +31,7 @@ class Heroku_Util {
 		} else {
 			throw new RuntimeException('Unknown database scheme: ' . $db['scheme']);
 		}
-		$config['database'] = $db['path'];
+		$config['database'] = substr($db['path'], 1);
 		$config['username'] = $db['user'];
 		$config['password'] = $db['pass'];
 		$config['host'] = $db['host'];
