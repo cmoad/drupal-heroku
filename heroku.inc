@@ -20,7 +20,7 @@ class Heroku_Util {
 		if (empty($url)) {
 			$url = $_ENV['DATABASE_URL'];
 		} else {
-			raise RuntimeException('Environment variable DATABASE_URL missing.');
+			throw new RuntimeException('Environment variable DATABASE_URL missing.');
 		}
 
 		$db = parse_url($url);
@@ -29,7 +29,7 @@ class Heroku_Util {
 		if ($db['scheme'] == 'postgres') {
 			$config['driver'] = 'pgsql';
 		} else {
-			raise RuntimeException('Unknown database scheme: ' . $db['scheme']);
+			throw new RuntimeException('Unknown database scheme: ' . $db['scheme']);
 		}
 		$config['database'] = $db['path'];
 		$config['username'] = $db['user'];
