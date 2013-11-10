@@ -14,4 +14,4 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 
 // Begin Heroku specific configuration
 require_once(DRUPAL_ROOT . '/heroku/heroku.inc');
-$databases = Heroku_Util::parseDatabaseUrl();
+$databases['default']['default'] = Heroku_Util::parseDatabaseUrl();

@@ -39,6 +39,6 @@ class Heroku_Util {
 			$config['port'] = $db['port'];
 		}
 
-		return array('default' => array('default' => $config));
+		return $config;
 	}
 }
