@@ -2,7 +2,7 @@
 
 The repository is a sandbox for trying to run Drupal on Heroku. There are still some issues that need to be resolved:
 
-* **ISSUE**: Drupal requires that its public filesystem is within the Drupal root. Heroku's app filesystem is read-only, so this is not possible. This is primarily a problem because you cannot enable CSS and JS aggregation. That's pretty much a requirement for running Drupal in production since IE only supports 32 stylesheets. This is easily exceeded once you add a handful of modules.
+* **ISSUE**: Drupal requires that its public filesystem is within the Drupal root. Heroku's app filesystem is read-only, so this is not possible. This is primarily a problem because you cannot enable CSS and JS aggregation. That's pretty much a requirement for running Drupal in production since IE only supports 32 stylesheets. This is easily exceeded once you add a handful of modules. (**Confirmed by Heroku support on 2013-11-11**)
 
 ## Setup Notes
 
